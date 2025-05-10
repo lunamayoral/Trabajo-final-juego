@@ -19,6 +19,50 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CargarPartidaController implements Initializable{
+
+    @FXML
+    public void Continuar(){
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargandopartida-view.fxml"));
+        //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            stage.setTitle("Tamaño del tablero ");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    public void Borrar(){
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargandopartida-view.fxml"));
+        Label borrar = new Label();
+        borrar.setText("Borrar");
+
+    }
+    @FXML
+    public void VolverAlInicio(){
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargandopartida-view.fxml"));
+        //conecta a la ventana IniciarJuego
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            stage.setTitle("Tamaño del tablero ");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
