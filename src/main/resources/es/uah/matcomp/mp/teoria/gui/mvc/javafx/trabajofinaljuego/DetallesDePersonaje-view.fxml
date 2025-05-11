@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="359.0" prefWidth="500.0" spacing="12.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.DetallesDePersonajeController">
+   <children>
+      <Label fx:id="detalles" alignment="CENTER" prefHeight="51.0" prefWidth="182.0" style="-fx-border-color: darkblue; -fx-background-color: yellow;" text="DETALLES" textFill="#1818e7">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#puntosButtonClick" text="Puntos de Vida: " textFill="#027320">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font></Button>
+      <Button fx:id="ataque" mnemonicParsing="false" onAction="#ataqueButtonClick" text="Ataque:" textFill="#ff247a">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font></Button>
+      <Button fx:id="defensa" mnemonicParsing="false" onAction="#defensaButtonClick" text="Defensa:" textFill="#279c61">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font></Button>
+      <Button fx:id="rangodemovimiento" mnemonicParsing="false" onAction="#rangodemovimientoButtonClick" text="Rango de movimiento:" textFill="#a60a65">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font></Button>
+      <Button fx:id="rangodeataque" mnemonicParsing="false" onAction="#rangodeataqueButtonClick" text="Rango de ataque:" textFill="#e10808">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font></Button>
+   </children>
+</VBox>

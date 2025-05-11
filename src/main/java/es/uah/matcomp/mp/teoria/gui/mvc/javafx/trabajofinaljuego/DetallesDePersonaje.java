@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class DetallesDePersonaje extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SegundaPantalla-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Iniciar juego!");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DetallesDePersonaje-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 420, 420);
+        stage.setTitle("Detalles de personaje");
         stage.setScene(scene);
         stage.show();
     }

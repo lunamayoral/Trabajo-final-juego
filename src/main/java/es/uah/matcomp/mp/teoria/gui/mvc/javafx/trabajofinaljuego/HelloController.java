@@ -4,11 +4,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
+    private Label nuevapartida;
+    private Label cargarpartida;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private void nuevapartidaButtonClick() {
+        nuevapartida.setText("Nueva partida");
     }
+
+    @FXML
+    private void cargarpartidaButtonClick() {
+        cargarpartida.setText("Cargar partida");
+    }
+
 }

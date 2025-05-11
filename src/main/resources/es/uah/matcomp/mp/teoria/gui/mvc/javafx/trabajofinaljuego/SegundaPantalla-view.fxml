@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="414.0" prefWidth="478.0" spacing="20.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Button onAction="#nuevapartidaButtonClick" prefHeight="70.0" prefWidth="170.0" style="-fx-border-color: black; -fx-background-color: lightgreen;" text="NUEVA PARTIDA" textFill="#3c17e8">
+      <font>
+         <Font name="Verdana" size="16.0" />
+      </font></Button>
+
+    <Label fx:id="welcomeText" />
+   <Button alignment="CENTER" mnemonicParsing="false" onAction="#cargarpartidaButtonClick" prefHeight="70.0" prefWidth="170.0" style="-fx-border-color: black; -fx-background-color: lightgreen; " text="CARGAR PARTIDA" textFill="#3c17e8">
+      <font>
+         <Font name="Verdana" size="16.0" />
+      </font></Button>
+</VBox>
