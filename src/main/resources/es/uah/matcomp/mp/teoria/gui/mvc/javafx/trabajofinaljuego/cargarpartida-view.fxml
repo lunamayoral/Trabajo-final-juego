@@ -23,8 +23,6 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="ID:" textAlignment="CENTER">
@@ -34,8 +32,6 @@
             </Label>
             <TextField prefHeight="25.0" prefWidth="195.0" GridPane.columnIndex="1" />
             <Button mnemonicParsing="false" onAction="#Continuar" prefHeight="25.0" prefWidth="90.0" text="Continuar" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" onAction="#Borrar" prefHeight="25.0" prefWidth="93.0" text="Quitar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#VolverAlInicio" style="-fx-background-color: red;" text="Volver al Inicio" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
