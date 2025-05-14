@@ -37,6 +37,17 @@ public class TableroDeJuegoController implements Initializable {
 
     @FXML
     private void IniciarJuego() {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargandopartida-view.fxml"));
+        //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            stage.setTitle("Tamaño del tablero ");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

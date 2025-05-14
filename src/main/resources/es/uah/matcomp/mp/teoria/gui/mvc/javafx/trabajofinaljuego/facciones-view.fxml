@@ -5,16 +5,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="397.0" prefWidth="360.0" spacing="60.0" style="-fx-background-color: black; " xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.FaccionesController">
+<VBox alignment="TOP_CENTER" prefHeight="374.0" prefWidth="402.0" spacing="50.0" style="-fx-background-color: black; " xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.FaccionesController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <Label text="ESCOGE TU FACCIÓN" textAlignment="CENTER" textFill="#ffef00">
       <font>
-         <Font name="System Bold" size="18.0" />
+         <Font name="System Bold" size="20.0" />
       </font>
+      <padding>
+         <Insets top="10.0" />
+      </padding>
    </Label>
-   <GridPane prefHeight="40.0" prefWidth="200.0">
+   <GridPane alignment="CENTER" prefHeight="40.0" prefWidth="266.0">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -23,12 +26,12 @@
        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Ciencas" style="-fx-background-color: blue;" text="CIENCIAS" textFill="WHITE">
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Ciencas" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: blue;" text="CIENCIAS" textFill="WHITE">
             <font>
                <Font size="15.0" />
             </font>
          </Button>
-         <Button mnemonicParsing="false" onAction="#Letras" style="-fx-background-color: red;" text="LETRAS" textFill="WHITE" GridPane.columnIndex="1">
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Letras" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: red;" text="LETRAS" textFill="WHITE" GridPane.columnIndex="1">
             <font>
                <Font size="15.0" />
             </font>
@@ -44,26 +47,26 @@
        <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-         <VBox prefHeight="100.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: blue;">
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: blue;">
             <children>
                <Label prefHeight="20.0" prefWidth="124.0" text="Personajes iniciales:" textFill="WHITE">
                   <font>
                      <Font size="14.0" />
                   </font></Label>
                <Label text="Matemático" textFill="WHITE" />
-               <Label text="Físico" textAlignment="CENTER" textFill="WHITE" />
+               <Label contentDisplay="TOP" text="Físico" textAlignment="CENTER" textFill="WHITE" />
             </children>
             <opaqueInsets>
                <Insets />
             </opaqueInsets></VBox>
-         <VBox prefHeight="100.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: red;" GridPane.columnIndex="1">
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="171.0" spacing="10.0" style="-fx-background-color: red;" GridPane.columnIndex="1">
             <children>
 
                <Label prefHeight="20.0" prefWidth="124.0" text="Personajes iniciales:" textFill="WHITE">
                   <font>
                      <Font size="14.0" />
                   </font></Label>
-               <Label text="Historiador" textFill="WHITE" />
+               <Label contentDisplay="RIGHT" text="Historiador" textFill="WHITE" />
                <Label text="Filólogo" textFill="WHITE" />
             </children></VBox>
       </children>
