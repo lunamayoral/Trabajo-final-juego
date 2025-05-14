@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -21,6 +22,8 @@ public class TamañoTableroController implements Initializable {
     private Label altura;
     @FXML
     private Label anchura;
+    @FXML
+    private GridPane tableroDeJuego;
     @FXML
     private TextField alturaField;  // Para que el jugador ponga la altura (filas)
     @FXML
@@ -40,12 +43,15 @@ public class TamañoTableroController implements Initializable {
             // Cargar la nueva pantalla con el tablero
             FXMLLoader loader = new FXMLLoader(getClass().getResource("tablerodejuego-view.fxml"));
             Parent root = loader.load();
-            TableroDeJuegoController controladorTablero = loader.getController();
-            controladorTablero.inicializarTablero(altura, anchura);
-            Stage stage = (Stage) alturaField.getScene().getWindow();
+            TableroDeJuegoController contralador = loader.getController();
+            contralador.inicializarTablero(altura, anchura);
+            Stage stage =(Stage) alturaField.getScene().getWindow();
+
             stage.setScene(new Scene(root));
             stage.setTitle("Tablero " + altura + " x " + anchura);
+
             stage.show();
+
         } catch (NumberFormatException e) {
             System.out.println("Introduce números válidos en altura y anchura.");
         } catch (IOException e) {

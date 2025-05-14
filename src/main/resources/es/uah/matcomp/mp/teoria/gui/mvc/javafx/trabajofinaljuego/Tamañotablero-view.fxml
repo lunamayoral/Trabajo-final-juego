@@ -27,11 +27,11 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="95.0" prefWidth="566.0" spacing="100.0">
          <children>
-            <TextField fx:id="alturaField" prefHeight="88.0" prefWidth="100.0" style="-fx-border-color: black;">
+            <TextField fx:id="alturaField" onAction="#GenerarTablero" prefHeight="88.0" prefWidth="100.0" style="-fx-border-color: black;">
                <font>
                   <Font size="30.0" />
                </font></TextField>
-            <TextField fx:id="anchuraField" prefHeight="88.0" prefWidth="100.0" style="-fx-border-color: black;">
+            <TextField fx:id="anchuraField" onAction="#GenerarTablero" prefHeight="88.0" prefWidth="100.0" style="-fx-border-color: black;">
                <font>
                   <Font size="30.0" />
                </font></TextField>

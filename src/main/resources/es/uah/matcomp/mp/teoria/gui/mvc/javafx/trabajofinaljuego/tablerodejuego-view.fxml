@@ -6,64 +6,64 @@
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="472.0" prefWidth="635.0" spacing="30.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.TableroDeJuegoController">
-   <children>
-      <Label fx:id="titulo" alignment="CENTER" prefHeight="44.0" prefWidth="318.0" style="-fx-border-color: BLACK; -fx-background-color: yellow;" text="DISEÑO DEL TABLERO">
-         <font>
-            <Font name="Verdana" size="22.0" />
-         </font>
-      </Label>
-      <HBox prefHeight="349.0" prefWidth="635.0" VBox.vgrow="NEVER">
-         <children>
-            <GridPane fx:id="tableroGrid" alignment="CENTER" gridLinesVisible="true" prefHeight="350.0" prefWidth="399.0" style="-fx-border-color: black; -fx-alignment: center; -fx-hgap: 0;">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
-            <VBox alignment="BOTTOM_RIGHT" prefHeight="79.0" prefWidth="211.0" spacing="10.0">
-               <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="258.0" prefWidth="190.0" spacing="10.0">
-                     <children>
-                        <Label fx:id="opciones" alignment="CENTER" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: lightgreen; -fx-border-color: black;" text="OPCIONES:">
-                           <font>
-                              <Font name="Verdana" size="19.0" />
-                           </font></Label>
-                        <Label fx:id="movimientoLabel" text="Movimiento:">
-                           <font>
-                              <Font name="Verdana" size="13.0" />
-                           </font></Label>
-                        <Slider fx:id="movimiento" min="-100.0" showTickLabels="true" showTickMarks="true" />
-                        <Label fx:id="ataqueLabel" text="Ataque:">
-                           <font>
-                              <Font name="Verdana" size="13.0" />
-                           </font></Label>
-                        <Slider fx:id="ataque" min="-100.0" showTickLabels="true" showTickMarks="true" />
-                        <Label fx:id="defensaLabel" text="Defensa:">
-                           <font>
-                              <Font name="Verdana" size="13.0" />
-                           </font></Label>
-                        <Slider fx:id="defensa" min="-100.0" showTickLabels="true" showTickMarks="true" />
-                     </children>
-                  </VBox>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#IniciarJuego" prefHeight="45.0" prefWidth="168.0" style="-fx-background-color: RED; -fx-border-color: BLACK;" text="INICIAR JUEGO">
-                     <font>
-                        <Font name="Verdana" size="18.0" />
-                     </font>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" />
-               </padding>
-            </VBox>
-         </children>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-      </HBox>
-   </children>
+    <children>
+        <Label fx:id="titulo" alignment="CENTER" prefHeight="44.0" prefWidth="318.0" style="-fx-border-color: BLACK; -fx-background-color: yellow;" text="DISEÑO DEL TABLERO">
+            <font>
+                <Font name="Verdana" size="22.0" />
+            </font>
+        </Label>
+        <HBox prefHeight="349.0" prefWidth="635.0" VBox.vgrow="NEVER">
+            <children>
+                <GridPane fx:id="tableroGrid" alignment="CENTER" gridLinesVisible="true" prefHeight="350.0" prefWidth="399.0" style="-fx-border-color: black; -fx-alignment: center; -fx-hgap: 0;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                </GridPane>
+                <VBox alignment="BOTTOM_RIGHT" prefHeight="79.0" prefWidth="211.0" spacing="10.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="258.0" prefWidth="190.0" spacing="10.0">
+                            <children>
+                                <Label fx:id="opciones" alignment="CENTER" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: lightgreen; -fx-border-color: black;" text="OPCIONES:">
+                                    <font>
+                                        <Font name="Verdana" size="19.0" />
+                                    </font></Label>
+                                <Label fx:id="movimientoLabel" text="Movimiento:">
+                                    <font>
+                                        <Font name="Verdana" size="13.0" />
+                                    </font></Label>
+                                <Slider fx:id="movimiento" min="-100.0" showTickLabels="true" showTickMarks="true" />
+                                <Label fx:id="ataqueLabel" text="Ataque:">
+                                    <font>
+                                        <Font name="Verdana" size="13.0" />
+                                    </font></Label>
+                                <Slider fx:id="ataque" min="-100.0" showTickLabels="true" showTickMarks="true" />
+                                <Label fx:id="defensaLabel" text="Defensa:">
+                                    <font>
+                                        <Font name="Verdana" size="13.0" />
+                                    </font></Label>
+                                <Slider fx:id="defensa" min="-100.0" showTickLabels="true" showTickMarks="true" />
+                            </children>
+                        </VBox>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#IniciarJuego" prefHeight="45.0" prefWidth="168.0" style="-fx-background-color: RED; -fx-border-color: BLACK;" text="INICIAR JUEGO">
+                            <font>
+                                <Font name="Verdana" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+        </HBox>
+    </children>
 </VBox>
