@@ -26,7 +26,7 @@ public class TableroDeJuegoController implements Initializable {
         for (int fila = 0; fila < altura; fila++) {
             for (int col = 0; col < anchura; col++) {
                 Button celda = new Button();
-                celda.setPrefSize(40, 40);
+                celda.setPrefSize(tableroGrid.getPrefWidth()/anchura, tableroGrid.getPrefHeight()/altura);
                 celda.setPadding(Insets.EMPTY);
                 GridPane.setMargin(celda, Insets.EMPTY);
                 celda.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightgray;");
