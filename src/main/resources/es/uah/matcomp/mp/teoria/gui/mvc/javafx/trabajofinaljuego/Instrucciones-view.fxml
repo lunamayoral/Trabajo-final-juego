@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextArea prefHeight="258.0" prefWidth="406.0" text="En el mundo del conocimiento, dos facciones, Ciencias y Letras, luchan por el control de territorios ancestrales. Cada facción cuenta con unidades con características y habilidades únicas basadas en su conocimiento. El campo de batalla es una cuadrícula con diferentes tipos de terreno que pueden afectar el movimiento o las habilidades." wrapText="true">
+      <Label layoutX="20.0" layoutY="20.0" prefHeight="203.0" prefWidth="461.0" text="En el mundo del conocimiento, dos facciones, Ciencias y Letras, luchan por el control de territorios ancestrales. Cada facción cuenta con unidades con características y habilidades únicas basadas en su conocimiento. El campo de batalla es una cuadrícula con diferentes tipos de terreno que pueden afectar el movimiento o las habilidades." textAlignment="JUSTIFY" wrapText="true">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
          <font>
-            <Font size="19.0" />
-         </font></TextArea>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
 </VBox>
