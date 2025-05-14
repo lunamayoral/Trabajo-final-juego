@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -16,6 +17,10 @@ import java.util.ResourceBundle;
 public class TableroDeJuegoController implements Initializable {
     @FXML
     private GridPane tableroGrid;
+    @FXML
+    private Label titulo;
+    @FXML
+    private Label opciones;
 
     public void inicializarTablero(int altura, int anchura) {
         tableroGrid.getChildren().clear();
