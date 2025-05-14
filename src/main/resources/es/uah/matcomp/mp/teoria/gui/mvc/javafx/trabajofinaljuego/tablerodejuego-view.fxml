@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox alignment="CENTER" prefHeight="441.0" prefWidth="565.0" spacing="30.0"
+      style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.TableroDeJuegoController">
+</VBox>

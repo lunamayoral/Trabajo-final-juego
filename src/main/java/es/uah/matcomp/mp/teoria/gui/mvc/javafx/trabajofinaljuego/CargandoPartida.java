@@ -6,17 +6,26 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.scene.layout.StackPane;
+import javafx.animation.PauseTransition;
+import javafx.util.Duration;
 
 
 import java.io.IOException;
 
 public class CargandoPartida extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage1) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargandopartida-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("CargandoPartida");
+        stage1.setTitle("CargandoPartida");
+
+        stage1.setScene(scene);
+        stage1.show();
+
+
     }
+
 
     public static void main(String[] args) {
         launch();
