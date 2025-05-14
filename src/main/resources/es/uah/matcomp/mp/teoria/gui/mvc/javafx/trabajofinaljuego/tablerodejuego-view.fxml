@@ -27,18 +27,30 @@
             </GridPane>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="79.0" prefWidth="211.0" spacing="10.0">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="277.0" prefWidth="190.0" spacing="40.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="258.0" prefWidth="190.0" spacing="10.0">
                      <children>
                         <Label fx:id="opciones" alignment="CENTER" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: lightgreen; -fx-border-color: black;" text="OPCIONES:">
                            <font>
                               <Font name="Verdana" size="19.0" />
                            </font></Label>
-                        <Slider min="-100.0" showTickLabels="true" showTickMarks="true" />
-                        <Slider min="-100.0" showTickLabels="true" showTickMarks="true" />
-                        <Slider min="-100.0" showTickLabels="true" showTickMarks="true" />
+                        <Label fx:id="movimientoLabel" text="Movimiento:">
+                           <font>
+                              <Font name="Verdana" size="13.0" />
+                           </font></Label>
+                        <Slider fx:id="movimiento" min="-100.0" showTickLabels="true" showTickMarks="true" />
+                        <Label fx:id="ataqueLabel" text="Ataque:">
+                           <font>
+                              <Font name="Verdana" size="13.0" />
+                           </font></Label>
+                        <Slider fx:id="ataque" min="-100.0" showTickLabels="true" showTickMarks="true" />
+                        <Label fx:id="defensaLabel" text="Defensa:">
+                           <font>
+                              <Font name="Verdana" size="13.0" />
+                           </font></Label>
+                        <Slider fx:id="defensa" min="-100.0" showTickLabels="true" showTickMarks="true" />
                      </children>
                   </VBox>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="168.0" style="-fx-background-color: RED; -fx-border-color: BLACK;" text="INICIAR JUEGO">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#IniciarJuego" prefHeight="45.0" prefWidth="168.0" style="-fx-background-color: RED; -fx-border-color: BLACK;" text="INICIAR JUEGO">
                      <font>
                         <Font name="Verdana" size="18.0" />
                      </font>
