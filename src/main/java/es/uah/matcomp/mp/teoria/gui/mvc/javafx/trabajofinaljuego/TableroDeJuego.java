@@ -14,7 +14,7 @@ public class TableroDeJuego extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(TableroDeJuego.class.getResource("tablerodejuego-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Iniciar juego!");
+        stage.setTitle("Diseño del Tablero");
         stage.setScene(scene);
         stage.show();
     }
