@@ -12,7 +12,7 @@ public class Facciones extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("facciones-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 500, 400);
         stage.setTitle("Facciones");
 
         GridPane grid = new GridPane();
@@ -21,13 +21,13 @@ public class Facciones extends Application {
 
                 if (i == 0) {
                     Button ciencias = new Button("CIENCIAS");
-                    ciencias.setMinSize(60, 60); // Tamaño mínimo para visualización
+                    ciencias.setMinSize(50, 50); // Tamaño mínimo para visualización
                     ciencias.setStyle("-fx-border-color: black; -fx-background-color: blue; -fx-text-alignment: center;");
                     grid.add(ciencias, i, j);
                 }
                 if (i == 1) {
                     Button letras = new Button("LETRAS");
-                    letras.setMinSize(60, 60); // Tamaño mínimo para visualización
+                    letras.setMinSize(50, 50); // Tamaño mínimo para visualización
                     letras.setStyle("-fx-border-color: black; -fx-background-color: red; -fx-text-alignment: center;");
                     grid.add(letras, i, j);
 

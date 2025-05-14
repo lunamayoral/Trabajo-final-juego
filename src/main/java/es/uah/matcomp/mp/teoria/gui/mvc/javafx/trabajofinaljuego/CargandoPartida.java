@@ -16,10 +16,6 @@ public class CargandoPartida extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargandopartida-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("CargandoPartida");
-
-
-
-
     }
 
     public static void main(String[] args) {

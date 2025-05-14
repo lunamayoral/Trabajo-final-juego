@@ -25,10 +25,10 @@ public class FaccionesController implements Initializable {
     public void Ciencas(){
         //Conexion a la siguiente ventana: Tamaño tablero
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("facciones-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tamañotablero-view.fxml"));
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
-            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.setTitle("Tamaño del tablero ");
             stage.setScene(scene);
             stage.show();
@@ -40,9 +40,9 @@ public class FaccionesController implements Initializable {
     public void Letras(){
         //Conexion a la siguiente ventana: Tamaño tablero
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargarpartida-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tamañotablero-view.fxml"));
         try {
-            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.setTitle("Tamaño del tablero ");
             stage.setScene(scene);
             stage.show();
