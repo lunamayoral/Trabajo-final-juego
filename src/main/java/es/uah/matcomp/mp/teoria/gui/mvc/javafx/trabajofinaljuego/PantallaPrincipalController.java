@@ -5,13 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PantallaPrincipalController implements Initializable {
 
     @FXML
-    public void Instrucciones(){
+    public void Instrucciones() {
         //Conexion a la siguiente ventana: instrucciones
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Instrucciones-view.fxml"));
@@ -26,6 +27,24 @@ public class PantallaPrincipalController implements Initializable {
         }
 
     }
+
+    @FXML
+    public void IniciarJuego() {
+        //Conexion a la siguiente ventana: iniciar juego
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SegundaPantalla-view.fxml"));
+        //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            stage.setTitle("Iniciar Juego");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }

@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="441.0" prefWidth="565.0" spacing="30.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.TamañoTableroController">
+<VBox alignment="CENTER" prefHeight="441.0" prefWidth="565.0" spacing="30.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.TamañoTableroController">
    <children>
       <Label fx:id="seleccionarTamaño" alignment="CENTER" prefHeight="44.0" prefWidth="437.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="SELECCIONAR TAMAÑO DEL TABLERO:" textAlignment="JUSTIFY" textFill="#5300e1">
          <font>

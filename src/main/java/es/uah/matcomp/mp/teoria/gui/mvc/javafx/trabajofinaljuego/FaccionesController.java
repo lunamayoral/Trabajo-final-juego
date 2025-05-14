@@ -52,7 +52,7 @@ public class FaccionesController implements Initializable {
 
     }
 
-    //@Override
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
