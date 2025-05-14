@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.GuardarController">
+   <children>
+      <Label alignment="CENTER" text="Tu código de partida es:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="Partida" alignment="CENTER" prefHeight="17.0" prefWidth="962.0" wrapText="true" />
+      <PasswordField fx:id="Id" alignment="CENTER" cacheShape="false" promptText="Introduce como quieres guardar tu partida" snapToPixel="false" />
+      <Button mnemonicParsing="false" onAction="#onAcceptBttClick" text="Aceptar" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

@@ -7,13 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
-public class PantallaPrincipal extends Application{
-    
+public class Guardar extends Application {
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(PantallaPrincipal.class.getResource("PantallaPrincipal-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Pantalla Principal");
+        FXMLLoader fxmlLoader = new FXMLLoader(Guardar.class.getResource("Guardar-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 550, 240);
+        stage.setTitle("Guardar");
         stage.setScene(scene);
         stage.show();
     }
