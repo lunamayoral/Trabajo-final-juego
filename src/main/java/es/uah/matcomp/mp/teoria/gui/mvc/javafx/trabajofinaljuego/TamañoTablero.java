@@ -21,5 +21,3 @@ public class TamañoTablero extends Application {
         launch();
     }
 }
-
-

@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -37,7 +38,6 @@ public class TableroDeJuegoController implements Initializable {
     @FXML
     private Label defensaLabel;
 
-
     @FXML
     private void IniciarJuego() {
         Stage stage = new Stage();
@@ -45,23 +45,16 @@ public class TableroDeJuegoController implements Initializable {
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
             Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Cargando Partida ");
             PauseTransition pausa = new PauseTransition(Duration.seconds(2));
             pausa.setOnFinished(event -> mostrarTableroDeJuego(stage));
-
             stage.setScene(scene);
             stage.show();
-
-
             pausa.play();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
     }
 
     public void mostrarTableroDeJuego(Stage stage) {
@@ -70,25 +63,16 @@ public class TableroDeJuegoController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(TableroDeJuego.class.getResource("tablerodejuego-view.fxml"));
             Scene scene = new Scene(loader.load(), 600, 400);
-
-
-
             Stage stage2 = new Stage();
             stage2.setTitle("Tablero de Juego");
             stage2.setScene(scene);
             stage2.show();
-
-
             stage.close(); // Cerrar la ventana anterior
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }
-
-
-
 
     public  void inicializarTablero(int altura, int anchura) {
         tableroGrid.getChildren().clear();
@@ -111,7 +95,4 @@ public class TableroDeJuegoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {    }
-
-
-
 }

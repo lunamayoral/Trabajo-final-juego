@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class HelloController {
@@ -17,6 +18,7 @@ public class HelloController {
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Facciones");
             stage.setScene(scene);
             stage.show();
@@ -32,13 +34,12 @@ public class HelloController {
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Cargar partida");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
 }

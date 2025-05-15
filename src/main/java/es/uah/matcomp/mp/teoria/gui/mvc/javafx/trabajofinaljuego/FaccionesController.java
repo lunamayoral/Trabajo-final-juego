@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.Button;
 
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -29,13 +30,13 @@ public class FaccionesController implements Initializable {
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Tamaño del tablero ");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
     public void Letras(){
         //Conexion a la siguiente ventana: Tamaño tablero
@@ -43,18 +44,17 @@ public class FaccionesController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tamañotablero-view.fxml"));
         try {
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Tamaño del tablero ");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-
 }

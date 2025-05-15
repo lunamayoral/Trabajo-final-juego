@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
 public class PantallaPrincipal extends Application{
     
     public void start(Stage stage) throws IOException {

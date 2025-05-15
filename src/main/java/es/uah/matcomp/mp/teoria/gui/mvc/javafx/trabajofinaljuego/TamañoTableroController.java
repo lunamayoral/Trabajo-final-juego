@@ -46,10 +46,8 @@ public class TamañoTableroController implements Initializable {
             TableroDeJuegoController contralador = loader.getController();
             contralador.inicializarTablero(altura, anchura);
             Stage stage =(Stage) alturaField.getScene().getWindow();
-
             stage.setScene(new Scene(root));
             stage.setTitle("Tablero " + altura + " x " + anchura);
-
             stage.show();
 
         } catch (NumberFormatException e) {
@@ -60,5 +58,4 @@ public class TamañoTableroController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {}
-
 }

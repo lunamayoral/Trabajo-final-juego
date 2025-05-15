@@ -13,7 +13,6 @@ public class Instrucciones extends Application {
         stage.setTitle("Instrucciones");
         stage.setScene(scene);
         stage.show();
-
     }
 
     public static void main(String[] args) {

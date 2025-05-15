@@ -20,8 +20,6 @@ public class CargarPartida extends Application {
         stage.show();
     }
 
-
-
     public static void main(String[] args) {
         launch();
     }
