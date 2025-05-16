@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -64,7 +65,7 @@ public class TableroDeJuegoController implements Initializable {
             FXMLLoader loader = new FXMLLoader(TableroDeJuego.class.getResource("Juego-view.fxml"));
             Scene scene = new Scene(loader.load(), 600, 400);
             Stage stage2 = new Stage();
-            stage2.setTitle("Tablero de Juego");
+            stage2.setTitle("Juego");
             stage2.setScene(scene);
             stage2.show();
             stage.close(); // Cerrar la ventana anterior

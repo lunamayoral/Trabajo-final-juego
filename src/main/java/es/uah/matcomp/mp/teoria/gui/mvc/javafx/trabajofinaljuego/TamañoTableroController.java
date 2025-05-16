@@ -14,6 +14,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.util.converter.NumberStringConverter;
 
 public class TamañoTableroController implements Initializable {
     @FXML
@@ -25,7 +30,7 @@ public class TamañoTableroController implements Initializable {
     @FXML
     private GridPane tableroDeJuego;
     @FXML
-    private TextField alturaField;  // Para que el jugador ponga la altura (filas)
+    private  TextField alturaField;  // Para que el jugador ponga la altura (filas)
     @FXML
     private TextField anchuraField; // Para que el jugador ponga la anchura (columnas)
 
@@ -40,15 +45,26 @@ public class TamañoTableroController implements Initializable {
                 System.out.println("Introduce valores positivos para altura y anchura.");
                 return;
             }
+
+
+            TableroSize.setDimensiones(anchura, altura);
+
+            System.out.println("Dimensiones guardadas: " + TableroSize.getAnchura() + " x " + TableroSize.getAltura());
+
+
             // Cargar la nueva pantalla con el tablero
             FXMLLoader loader = new FXMLLoader(getClass().getResource("tablerodejuego-view.fxml"));
             Parent root = loader.load();
-            TableroDeJuegoController contralador = loader.getController();
-            contralador.inicializarTablero(altura, anchura);
+
+            TableroDeJuegoController contralado = loader.getController();
+            contralado.inicializarTablero(TableroSize.getAltura(), TableroSize.getAnchura());
             Stage stage =(Stage) alturaField.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Tablero " + altura + " x " + anchura);
             stage.show();
+
+
+
 
         } catch (NumberFormatException e) {
             System.out.println("Introduce números válidos en altura y anchura.");
@@ -57,5 +73,23 @@ public class TamañoTableroController implements Initializable {
         }
     }
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+
+    }
 }
