@@ -33,7 +33,7 @@ public class HelloController {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("cargarpartida-view.fxml"));
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
-            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Cargar partida");
             stage.setScene(scene);
