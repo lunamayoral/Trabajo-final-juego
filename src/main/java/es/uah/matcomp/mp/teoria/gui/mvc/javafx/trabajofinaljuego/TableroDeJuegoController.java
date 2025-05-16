@@ -61,7 +61,7 @@ public class TableroDeJuegoController implements Initializable {
         stage.close(); // Cerramos la segunda ventana antes de abrir la tercera
 
         try {
-            FXMLLoader loader = new FXMLLoader(TableroDeJuego.class.getResource("tablerodejuego-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(TableroDeJuego.class.getResource("Juego-view.fxml"));
             Scene scene = new Scene(loader.load(), 600, 400);
             Stage stage2 = new Stage();
             stage2.setTitle("Tablero de Juego");
