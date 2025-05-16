@@ -88,12 +88,29 @@ public class TableroDeJuegoController implements Initializable {
                 celda.setPadding(Insets.EMPTY);
                 GridPane.setMargin(celda, Insets.EMPTY);
                 celda.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightgray;");
-
+                // selección
+                celda.setOnAction(event -> {
+                    if (celda.getStyle().contains("lightgray")) {
+                        celda.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightblue;");
+                    } else {
+                        celda.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightgray;");
+                    }
+                });
                 tableroGrid.add(celda, col, fila);
             }
         }
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {    }
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Modificar las casillas con el valor actual del slider
+        movimiento.valueProperty().addListener((obs, oldVal, newVal) ->
+                movimientoLabel.setText(String.format("Movimiento: %.0f", newVal.doubleValue())));
+
+        ataque.valueProperty().addListener((obs, oldVal, newVal) ->
+                ataqueLabel.setText(String.format("Ataque: %.0f", newVal.doubleValue())));
+
+        defensa.valueProperty().addListener((obs, oldVal, newVal) ->
+                defensaLabel.setText(String.format("Defensa: %.0f", newVal.doubleValue())));
+    }
 }
