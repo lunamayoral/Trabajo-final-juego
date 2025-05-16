@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" spacing="10.0" style="-fx-padding: 10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.JuegoController">
+<VBox prefHeight="400.0" prefWidth="600.0" spacing="10.0" style="-fx-padding: 10; -fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.JuegoController">
 
     <children>
         <HBox prefHeight="349.0" prefWidth="635.0" spacing="10.0" VBox.vgrow="NEVER">
@@ -23,11 +23,11 @@
             <children>
                <HBox prefHeight="110.0" prefWidth="164.0" style="-fx-border-color: black;">
                   <children>
-                     <VBox prefHeight="110.0" prefWidth="170.0">
+                     <VBox alignment="CENTER" prefHeight="110.0" prefWidth="170.0" spacing="3.0" style="-fx-background-color: lightgreen;">
                         <children>
-                           <Label text="MENÚ">
+                           <Label alignment="CENTER" prefHeight="23.0" prefWidth="62.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="MENÚ">
                               <font>
-                                 <Font size="15.0" />
+                                 <Font name="Verdana" size="15.0" />
                               </font>
                            </Label>
                            <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="60.0" text="PAUSAR">
@@ -50,11 +50,11 @@
                </HBox>
                <HBox prefHeight="120.0" prefWidth="164.0" style="-fx-border-color: black;">
                   <children>
-                     <VBox prefHeight="120.0" prefWidth="160.0">
+                     <VBox alignment="CENTER" prefHeight="120.0" prefWidth="160.0" spacing="3.0" style="-fx-background-color: lightgreen;">
                         <children>
-                           <Label text="PERSONAJE">
+                           <Label alignment="CENTER" prefHeight="23.0" prefWidth="110.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="PERSONAJE">
                               <font>
-                                 <Font size="15.0" />
+                                 <Font name="Verdana" size="15.0" />
                               </font>
                            </Label>
                            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="ATACAR" />
@@ -66,11 +66,11 @@
                </HBox>
                <HBox prefHeight="60.0" prefWidth="164.0" style="-fx-border-color: black;">
                   <children>
-                     <VBox prefHeight="45.0" prefWidth="167.0">
+                     <VBox alignment="CENTER" prefHeight="45.0" prefWidth="167.0" spacing="3.0" style="-fx-background-color: lightgreen;">
                         <children>
-                           <Label text="CASILLA">
+                           <Label alignment="CENTER" prefHeight="21.0" prefWidth="88.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="CASILLA">
                               <font>
-                                 <Font size="15.0" />
+                                 <Font name="Verdana" size="15.0" />
                               </font>
                            </Label>
                            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="INFO" />
@@ -78,7 +78,7 @@
                      </VBox>
                   </children>
                </HBox>
-               <HBox prefHeight="59.0" prefWidth="164.0" style="-fx-border-color: black;">
+               <HBox alignment="CENTER" prefHeight="59.0" prefWidth="164.0" style="-fx-border-color: black; -fx-background-color: lightgreen;">
                   <children>
                      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="MENSAJES" />
                   </children>
