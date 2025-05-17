@@ -1,5 +1,6 @@
 package es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego;
 
+import javafx.animation.PauseTransition;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
@@ -13,11 +14,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 
 public class JuegoController implements Initializable {
@@ -25,6 +29,25 @@ public class JuegoController implements Initializable {
 
     @FXML
     private GridPane tableroGrid;
+
+    public void guardar() {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(CargarPartida.class.getResource("Guardar-view.fxml"));
+        //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
+        try {
+            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Guardar Partida ");
+            PauseTransition pausa = new PauseTransition(Duration.seconds(2));
+            stage.setScene(scene);
+            stage.show();
+            pausa.play();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
