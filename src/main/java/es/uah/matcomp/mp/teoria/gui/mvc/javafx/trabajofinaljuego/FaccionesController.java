@@ -20,15 +20,19 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FaccionesController implements Initializable {
-    Label title;
-    Button ciencias;
-    Button letras;
+
+
     public void Ciencas(){
         //Conexion a la siguiente ventana: Tamaño tablero
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tamañotablero-view.fxml"));
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
         try {
+            Personaje personaje = new Personaje();
+            personaje.setFaccion("Ciencias");
+            Personaje.setPersonajeActivo(personaje);
+
+
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Tamaño del tablero ");
@@ -43,6 +47,10 @@ public class FaccionesController implements Initializable {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tamañotablero-view.fxml"));
         try {
+            Personaje personaje = new Personaje();
+            personaje.setFaccion("Letras");
+            Personaje.setPersonajeActivo(personaje);
+
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Tamaño del tablero ");

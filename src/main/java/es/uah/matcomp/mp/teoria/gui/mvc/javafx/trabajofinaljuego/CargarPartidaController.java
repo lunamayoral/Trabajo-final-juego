@@ -49,7 +49,7 @@ public class CargarPartidaController implements Initializable{
 
         try {
             FXMLLoader loader = new FXMLLoader(TableroDeJuego.class.getResource("Juego-view.fxml"));
-            Scene scene = new Scene(loader.load(), 600, 400);
+            Scene scene = new Scene(loader.load(), 600, 600);
             Stage stage2 = new Stage();
             stage2.setTitle("Tablero de Juego");
             stage2.setScene(scene);
