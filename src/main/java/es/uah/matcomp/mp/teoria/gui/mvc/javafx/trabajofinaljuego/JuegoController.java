@@ -85,10 +85,10 @@ public class JuegoController implements Initializable {
                 }
                     Button mat = new Button("M");
                     mat.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
-                    tableroGrid.add(mat, 0, anch-1);
+                    tableroGrid.add(mat, 0, alt-1);
                     Button fis = new Button("F");
                     fis.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
-                    tableroGrid.add(fis, alt-1, anch-1);
+                    tableroGrid.add(fis, anch-1, alt-1);
 
                 }
             Personaje unitl = Personaje.getPersonajeActivo();
@@ -100,7 +100,7 @@ public class JuegoController implements Initializable {
                     tableroGrid.add(hist, 0, 0);
                     Button fil = new Button("L");
                     fil.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
-                    tableroGrid.add(fil, alt-1, 0);
+                    tableroGrid.add(fil, anch-1, 0);
 
                 }
 

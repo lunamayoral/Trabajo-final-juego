@@ -5,14 +5,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="475.0" prefWidth="954.0" spacing="20.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.GuardarController">
+<VBox alignment="CENTER" prefHeight="475.0" prefWidth="954.0" spacing="20.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.GuardarController">
    <children>
       <Label alignment="CENTER" text="Tu código de partida es:" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Verdana" size="19.0" />
          </font>
       </Label>
-      <TextField promptText="Introduzca como quiere llamar a su partida" />
+      <TextField fx:id="partida" promptText="Introduzca como quiere llamar a su partida" />
+      <Button mnemonicParsing="false" onAction="#onGuardarButtonClick" style="-fx-background-color: lightgreen; -fx-border-color: black;" text="Guardar" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
