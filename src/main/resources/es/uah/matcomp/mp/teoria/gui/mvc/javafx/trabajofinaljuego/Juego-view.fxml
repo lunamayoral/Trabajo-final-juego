@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="480.0" prefWidth="680.0" spacing="20.0" style="-fx-padding: 10.0; -fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.JuegoController">
+<VBox maxHeight="Infinity" maxWidth="Infinity" spacing="20.0" style="-fx-padding: 10.0; -fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego.JuegoController">
 
     <children>
         <Label fx:id="contadores" alignment="CENTER" prefHeight="30.0" prefWidth="600.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="RONDA:X   TURNO: Y">
@@ -13,43 +13,33 @@
             </font>
         </Label>
 
-        <HBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing = "10.0" VBox.vgrow="NEVER">
-            <VBox  alignment="CENTER" prefHeight="400.0" prefWidth="400.0" spacing = "10.0" style="-fx-border-color: black;">
+        <HBox alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="357.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="NEVER">
+            <VBox alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" spacing="10.0" style="-fx-border-color: black;">
 
 
-    <GridPane fx:id="tableroGrid" alignment="BOTTOM_LEFT" gridLinesVisible="true" maxHeight="400.0" prefHeight="400.0" prefWidth="400.0" style="-fx-border-color: black; -fx-alignment: center; -fx-hgap: 0; -fx-vgap: 0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="0.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+    <GridPane fx:id="tableroGrid" alignment="BOTTOM_LEFT" gridLinesVisible="true" maxHeight="Infinity" maxWidth="Infinity" style="-fx-border-color: black; -fx-alignment: center; -fx-hgap: 0; -fx-vgap: 0">
+
     </GridPane>
             </VBox>
-         <VBox prefHeight="400.0" prefWidth="164.0" style="-fx-border-color: black;">
-            <children>
-               <HBox prefHeight="130.0" prefWidth="164.0" style="-fx-border-color: black;">
-                  <children>
-                     <VBox alignment="CENTER" prefHeight="110.0" prefWidth="164.0" spacing="3.0" style="-fx-background-color: lightgreen;">
+            <VBox fx:id="menuVBox" alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="403.0" prefWidth="168.0" style="-fx-border-color: black; -fx-background-color: lightgreen;">            <children>
+                <HBox maxHeight="Infinity" maxWidth="Infinity" style="-fx-border-color: black;">                  <children>
+                     <VBox alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="169.0" prefWidth="164.0" spacing="3.0" style="-fx-background-color: lightgreen;">
                         <children>
-                           <Label alignment="CENTER" prefHeight="23.0" prefWidth="62.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="MENÚ">
+                           <Label alignment="CENTER" prefHeight="19.0" prefWidth="138.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="MENÚ">
                               <font>
                                  <Font name="Verdana" size="15.0" />
                               </font>
                            </Label>
-                           <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="60.0" text="PAUSAR">
+                           <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="78.0" text="PAUSAR">
                               <font>
                                  <Font size="10.0" />
                               </font></Button>
-                           <Button mnemonicParsing="false" onAction="#guardar" prefHeight="22.0" prefWidth="60.0" text="GUARDAR">
+                           <Button mnemonicParsing="false" onAction="#guardar" prefHeight="22.0" prefWidth="76.0" text="GUARDAR">
                               <font>
                                  <Font size="10.0" />
                               </font>
                            </Button>
-                           <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="60.0" text="SALIR">
+                           <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="75.0" text="SALIR">
                               <font>
                                  <Font size="10.0" />
                               </font>
@@ -58,9 +48,8 @@
                      </VBox>
                   </children>
                </HBox>
-               <HBox prefHeight="120.0" prefWidth="164.0" style="-fx-border-color: black;">
-                  <children>
-                     <VBox alignment="CENTER" prefHeight="120.0" prefWidth="164.0" spacing="3.0" style="-fx-background-color: lightgreen;">
+                <HBox maxHeight="Infinity" maxWidth="Infinity" style="-fx-border-color: black; -fx-background-color: lightgreen;">                  <children>
+                     <VBox alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="182.0" prefWidth="164.0" spacing="3.0" style="-fx-background-color: lightgreen;">
                         <children>
                            <Label alignment="CENTER" prefHeight="23.0" prefWidth="110.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="PERSONAJE">
                               <font>
@@ -74,22 +63,20 @@
                      </VBox>
                   </children>
                </HBox>
-               <HBox prefHeight="80.0" prefWidth="164.0" style="-fx-border-color: black;">
-                  <children>
-                     <VBox alignment="CENTER" prefHeight="45.0" prefWidth="164.0" spacing="3.0" style="-fx-background-color: lightgreen;">
+                <HBox maxHeight="Infinity" maxWidth="Infinity" prefHeight="75.0" prefWidth="140.0" style="-fx-border-color: black; -fx-background-color: lightgreen;">                  <children>
+                     <VBox alignment="CENTER" maxHeight="Infinity" maxWidth="Infinity" prefHeight="82.0" prefWidth="164.0" spacing="3.0" style="-fx-background-color: lightgreen;">
                         <children>
-                           <Label alignment="CENTER" prefHeight="21.0" prefWidth="88.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="CASILLA">
+                           <Label alignment="CENTER" prefHeight="41.0" prefWidth="88.0" style="-fx-border-color: black; -fx-background-color: yellow;" text="CASILLA">
                               <font>
                                  <Font name="Verdana" size="15.0" />
                               </font>
                            </Label>
-                           <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="INFO" />
+                           <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="INFO" />
                         </children>
                      </VBox>
                   </children>
                </HBox>
-               <HBox alignment="CENTER" prefHeight="70.0" prefWidth="164.0" style="-fx-border-color: black; -fx-background-color: lightgreen;">
-                  <children>
+                <HBox maxHeight="Infinity" maxWidth="Infinity" prefHeight="86.0" prefWidth="166.0" style="-fx-border-color: black; -fx-background-color: lightgreen;">                  <children>
                      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="MENSAJES" />
                   </children>
                </HBox>
