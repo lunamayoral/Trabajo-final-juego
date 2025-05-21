@@ -16,6 +16,38 @@ public class Letras extends Facciones{
         this.puntosDeVida = puntosDeVida;
         this.rangoAtaque = rangoAtaque;
     }
+
+    public int getAtaque() {
+        return ataque;
+    }
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
+    }
+    public int getDefensa() {
+        return defensa;
+    }
+    public void setDefensa(int defensa) {
+        this.defensa = defensa;
+    }
+    public int getRangoMovimiento() {
+        return rangoMovimiento;
+    }
+    public void setRangoMovimiento(int rangoMovimiento) {
+        this.rangoMovimiento = rangoMovimiento;
+    }
+    public int getPuntosDeVida() {
+        return puntosDeVida;
+    }
+    public void setPuntosDeVida(int puntosDeVida) {
+        this.puntosDeVida = puntosDeVida;
+    }
+    public int getRangoAtaque() {
+        return rangoAtaque;
+    }
+    public void setRangoAtaque(int rangoAtaque) {
+        this.rangoAtaque = rangoAtaque;
+    }
+
     @Override
     public void mostrarInfo() {
         System.out.println("Facción: " + getNombre() +
