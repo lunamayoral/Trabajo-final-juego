@@ -83,8 +83,7 @@ public class JuegoController implements Initializable {
         int anch = TableroSize.getAnchura();  // Tomar el valor guardado
         int alt = TableroSize.getAltura();
 
-        for (int fila = 0; fila < alt; fila++) {
-            for (int col = 0; col < anch; col++) {
+
 
 
                 Personaje unit = Personaje.getPersonajeActivo();
@@ -145,9 +144,9 @@ public class JuegoController implements Initializable {
                 }
 
 
-                }
 
-                }
+
+
         
     }
 
