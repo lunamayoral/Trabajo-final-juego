@@ -10,4 +10,6 @@ module es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego {
 
     opens es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego to javafx.fxml;
     exports es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego;
+    exports MotorDeJuego;
+    opens MotorDeJuego to javafx.fxml;
 }
