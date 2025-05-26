@@ -37,6 +37,7 @@ public class CargarPartidaController implements Initializable{
             PauseTransition pausa = new PauseTransition(Duration.seconds(2));
             pausa.setOnFinished(event -> mostrarTableroDeJuego(stage));
             stage.setScene(scene);
+            LogSetup.log("Accediendo a partida anterior");
             stage.show();
             pausa.play();
         } catch (Exception e) {

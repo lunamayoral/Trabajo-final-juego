@@ -22,6 +22,7 @@ public class PantallaPrincipalController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Instrucciones");
+            LogSetup.log("PLAYER escogió leer las instrucciones");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
@@ -40,6 +41,7 @@ public class PantallaPrincipalController implements Initializable {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Iniciar Juego");
             stage.setScene(scene);
+            LogSetup.log("PLAYER escogió INICIAR el JUEGO");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

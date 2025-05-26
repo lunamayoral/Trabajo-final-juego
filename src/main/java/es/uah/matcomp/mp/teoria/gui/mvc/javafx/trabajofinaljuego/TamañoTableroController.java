@@ -43,6 +43,7 @@ public class TamañoTableroController implements Initializable {
             int anchura = Integer.parseInt(anchuraText);
             if (altura <= 0 || anchura <= 0) {
                 System.out.println("Introduce valores positivos para altura y anchura.");
+                LogSetup.log("PLAYER escogió un tablero con valores negativos. ERROR.");
                 return;
             }
 
@@ -61,6 +62,7 @@ public class TamañoTableroController implements Initializable {
             Stage stage =(Stage) alturaField.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Tablero " + altura + " x " + anchura);
+            LogSetup.log("PLAYER escogió un tablero de " + altura + " de altura " + anchura + " de anchura.");
             stage.show();
 
 

@@ -51,6 +51,7 @@ public class TableroDeJuegoController implements Initializable {
             PauseTransition pausa = new PauseTransition(Duration.seconds(2));
             pausa.setOnFinished(event -> mostrarTableroDeJuego(stage));
             stage.setScene(scene);
+            LogSetup.log("PLAYER decidió emepezar a jugar.");
             stage.show();
             pausa.play();
         } catch (Exception e) {

@@ -19,26 +19,31 @@ public class DetallesDePersonajeController implements Initializable {
     @FXML
     protected void puntosButtonClick(){
         puntos.setText("Puntos de Vida: ");
+        LogSetup.log("puntosDeVida:");
     }
 
     @FXML
     protected void ataqueButtonClick(){
         ataque.setText("Ataque: ");
+        LogSetup.log("puntosDeAtaque:");
     }
 
     @FXML
     protected void defensaButtonClick(){
         defensa.setText("Defensa: ");
+        LogSetup.log("puntosDeDefensa:");
     }
 
     @FXML
     protected void rangodemovimientoButtonClick(){
         rangodemovimiento.setText("Rango de movimiento: ");
+        LogSetup.log("RangoDelMovimiento:");
     }
 
     @FXML
     protected void rangodeataqueButtonClick(){
         rangodeataque.setText("Rango de ataque: ");
+        LogSetup.log("RangoDelMovimiento:");
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {

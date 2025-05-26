@@ -32,6 +32,9 @@ public class FaccionesController implements Initializable {
             personaje.setFaccion("Ciencias");
             Personaje.setPersonajeActivo(personaje);
 
+            LogSetup.log("PLAYER escogió la facción CIENCIAS");
+            LogSetup.log("La IA controlará la facción  LETRAS");
+
 
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.initModality(Modality.APPLICATION_MODAL);
@@ -50,6 +53,9 @@ public class FaccionesController implements Initializable {
             Personaje personaje = new Personaje();
             personaje.setFaccion("Letras");
             Personaje.setPersonajeActivo(personaje);
+
+            LogSetup.log("PLAYER escogió la facción LETRAS");
+            LogSetup.log("La IA controlará la facción  CIENCIAS");
 
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
             stage.initModality(Modality.APPLICATION_MODAL);

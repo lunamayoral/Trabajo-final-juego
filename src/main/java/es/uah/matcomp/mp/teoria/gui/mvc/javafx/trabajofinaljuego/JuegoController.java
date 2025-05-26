@@ -49,6 +49,7 @@ public class JuegoController implements Initializable {
             stage.setTitle("Guardar Partida ");
             PauseTransition pausa = new PauseTransition(Duration.seconds(2));
             stage.setScene(scene);
+            LogSetup.log("PLAYER decidió GUARDAR la partida");
             stage.show();
             pausa.play();
         } catch (Exception e) {
@@ -69,6 +70,7 @@ public class JuegoController implements Initializable {
             stage.setTitle("Detalles Personaje ");
 
             stage.setScene(scene);
+            LogSetup.log("PLAYER decidió consultar los detalles del personaje");
             stage.show();
 
         } catch (Exception e) {
@@ -93,21 +95,25 @@ public class JuegoController implements Initializable {
                     mat.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
                     mat.setPrefSize(30,30);
                     tableroGrid.add(mat, 0, alt-1);
+                    LogSetup.log("Matemático agregado a la casilla (" + (0) +"," +(alt-1)+")");
 
                     Button fis = new Button("F");
                     fis.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
                     fis.setPrefSize(30,30);
                     tableroGrid.add(fis, anch-1, alt-1);
+                    LogSetup.log("Físico agregado a la casilla (" + (anch-1) +"," +(alt-1)+")");
 
                     Button hist = new Button("H");
                     hist.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
                     hist.setPrefSize(30,30);
                     tableroGrid.add(hist, 0, 0);
+                    LogSetup.log("Historiador agregado a la casilla (" + (0) +"," +(0)+")");
 
                     Button fil = new Button("L");
                     fil.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
                     fil.setPrefSize(30,30);
                     tableroGrid.add(fil, anch-1, 0);
+                    LogSetup.log("Filólogo agregado a la casilla (" + (anch-1) +"," +(0)+")");
                 }
                 Personaje unitl = Personaje.getPersonajeActivo();
                 if (unitl != null && unitl.getFaccion().equals("Letras")) {
@@ -117,21 +123,25 @@ public class JuegoController implements Initializable {
                     hist.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
                     hist.setPrefSize(30,30);
                     tableroGrid.add(hist, 0, alt-1);
+                    LogSetup.log("Historiador agregado a la casilla (" + (0) +"," +(alt-1)+")");
 
                     Button fil = new Button("L");
                     fil.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
                     fil.setPrefSize(30,30);
                     tableroGrid.add(fil, anch-1, alt-1);
+                    LogSetup.log("Filólogo agregado a la casilla (" + (anch-1) +"," +(alt-1)+")");
 
                     Button mat = new Button("M");
                     mat.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
                     mat.setPrefSize(30,30);
                     tableroGrid.add(mat, 0, 0);
+                    LogSetup.log("Matemático agregado a la casilla (" + (0) +"," +(0)+")");
 
                     Button fis = new Button("F");
                     fis.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
                     fis.setPrefSize(30,30);
                     tableroGrid.add(fis, anch-1, 0);
+                    LogSetup.log("Físico agregado a la casilla (" + (anch-1) +"," +(0)+")");
                 }
 
 
@@ -238,6 +248,7 @@ public class JuegoController implements Initializable {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("PantallaPrincipal");
             stage.setScene(scene);
+            LogSetup.log("PLAYER decidió SALIR del juego");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -21,6 +21,7 @@ public class HelloController {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Facciones");
             stage.setScene(scene);
+            LogSetup.log("PLAYER escogió crear una NUEVA PARTIDA");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,6 +38,7 @@ public class HelloController {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Cargar partida");
             stage.setScene(scene);
+            LogSetup.log("PLAYER escogió CARGAR una PARTIDA anterior");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
