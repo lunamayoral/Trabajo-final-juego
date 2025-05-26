@@ -1,37 +1,35 @@
 package es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego;
 
 import javafx.animation.PauseTransition;
-
+import javafx.beans.property.Property;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
-
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
-import javafx.scene.input.KeyCode;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.util.converter.NumberStringConverter;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.stage.Modality;
-
+import javafx.stage.Stage;
 
 
 public class JuegoController implements Initializable {
 
     @FXML
     private Label contadores;
-    private Button SALIR;
 
 
     @FXML
@@ -204,8 +202,9 @@ public class JuegoController implements Initializable {
         System.out.println("Creando tablero de tamaño: " + ancho + "x" + alto);
         contadores.setText("RONDA: 0  TURNO: PLAYER  CIENCIAS: 2  LETRAS: 2");
         System.out.println(tableroGrid);
-        double cellAncho = Math.max(30, Math.floor((tableroGrid.getPrefWidth() - 20) / ancho));
-        double cellAlto = Math.max(30, Math.floor((tableroGrid.getPrefHeight() - 20) / alto));
+        double cellAncho =Math.max(30, Math.floor((tableroGrid.getPrefWidth()-20)/ancho));
+        double cellAlto = Math.max(30, Math.floor((tableroGrid.getPrefHeight()-20)/alto));
+
 
 
         tableroGrid.getChildren().clear();
@@ -216,111 +215,27 @@ public class JuegoController implements Initializable {
         for (int fila = 0; fila < alto; fila++) {
             for (int col = 0; col < ancho; col++) {
                 Button celda = new Button();
-                celda.setPrefSize(cellAncho, cellAlto);
-                celda.setPadding(Insets.EMPTY);
+                celda.setPrefSize(cellAncho,cellAlto);
+                celda.setPadding( Insets.EMPTY);
                 GridPane.setMargin(celda, Insets.EMPTY);
                 celda.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightgray;");
                 tableroGrid.add(celda, col, fila);
 
 
+
+
+
+
+                
             }
 
         }
         setEsquinas();
-    }
-    @FXML
-    private void Salir() {
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("PantallaPrincipal-view.fxml"));
-        //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
-        try {
-            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("PantallaPrincipal");
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+
     }
 
-private static final int n = 5;
-    private static final int m = 7;
-    private Button[][] labelMap = new Button[n][m];
-
-    private int charRow = 0;
-    private int charCol = 0;
-
-    private static final String CELL_STYLE = "-fx-border-color: black; -fx-text-alignment: center;";
-    private static final String CHAR_STYLE = "-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-color: black;";
-
-    @FXML
-    private GridPane tableroDeJuego;
-
-    @FXML
-    public void initialize() {
-        tableroDeJuego.setAlignment(Pos.CENTER);
-        tableroDeJuego.setHgap(5);
-        tableroDeJuego.setVgap(5);
-        initializeBoard();
-
-        // Manejador de teclado
-        tableroDeJuego.setOnKeyPressed(event -> {
-            KeyCode code = event.getCode();
-            if (code == KeyCode.UP) {
-                moveCharacter(charRow - 1, charCol);
-            } else if (code == KeyCode.DOWN) {
-                moveCharacter(charRow + 1, charCol);
-            } else if (code == KeyCode.LEFT) {
-                moveCharacter(charRow, charCol - 1);
-            } else if (code == KeyCode.RIGHT) {
-                moveCharacter(charRow, charCol + 1);
-            }
-        });
-
-        // Para recibir eventos de teclado
-        tableroDeJuego.requestFocus();
-    }
-
-    private void initializeBoard() {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                Button placeholder = new Button("Celda " + i + "," + j);
-                placeholder.setMinSize(100, 60);
-                placeholder.setStyle(CELL_STYLE);
-                placeholder.setFocusTraversable(false);
-                labelMap[i][j] = placeholder;
-                tableroDeJuego.add(placeholder, j, i);
-            }
-        }
-        updateCharacterPosition();
-    }
-
-    private void moveCharacter(int newRow, int newCol) {
-        if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m) {
-            charRow = newRow;
-            charCol = newCol;
-            updateCharacterPosition();
-        }
-    }
-
-    private void updateCharacterPosition() {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                Button btn = labelMap[i][j];
-                if (i == charRow && j == charCol) {
-                    btn.setText("⚔️ Personaje");
-                    btn.setStyle(CHAR_STYLE);
-                } else {
-                    btn.setText("Celda " + i + "," + j);
-                    btn.setStyle(CELL_STYLE);
-                }
-            }
-        }
-    }
 }
-
-
 
 
 
