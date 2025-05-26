@@ -1,5 +1,5 @@
 package es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego;
-import javafx.scene.control.Slider;
+
 
 public class Personaje {
     Personaje personaje;

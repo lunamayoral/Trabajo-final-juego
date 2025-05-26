@@ -1,13 +1,9 @@
 package es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego;
-import javafx.animation.PauseTransition;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-
 import java.io.IOException;
 
 public class CargarPartida extends Application {
