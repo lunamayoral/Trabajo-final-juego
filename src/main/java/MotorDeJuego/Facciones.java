@@ -10,6 +10,4 @@ public abstract class Facciones {
         return nombre;
     }
     public abstract void mostrarInfo();
-
-
 }

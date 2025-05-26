@@ -9,7 +9,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -20,7 +19,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.stage.Modality;
@@ -59,7 +57,7 @@ public class JuegoController implements Initializable {
     }
 
     @FXML
-    public void detalles(){
+    public void detalles() {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(CargarPartida.class.getResource("DetallesDePersonaje-view.fxml"));
         //para conectar a la venta siguiente necesito el fxml de la ventana siguiente
@@ -91,23 +89,23 @@ public class JuegoController implements Initializable {
 
                     Button mat = new Button("M");
                     mat.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
-                    mat.setPrefSize(30,30);
-                    tableroGrid.add(mat, 0, alt-1);
+                    mat.setPrefSize(30, 30);
+                    tableroGrid.add(mat, 0, alt - 1);
 
                     Button fis = new Button("F");
                     fis.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
-                    fis.setPrefSize(30,30);
-                    tableroGrid.add(fis, anch-1, alt-1);
+                    fis.setPrefSize(30, 30);
+                    tableroGrid.add(fis, anch - 1, alt - 1);
 
                     Button hist = new Button("H");
                     hist.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
-                    hist.setPrefSize(30,30);
+                    hist.setPrefSize(30, 30);
                     tableroGrid.add(hist, 0, 0);
 
                     Button fil = new Button("L");
                     fil.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
-                    fil.setPrefSize(30,30);
-                    tableroGrid.add(fil, anch-1, 0);
+                    fil.setPrefSize(30, 30);
+                    tableroGrid.add(fil, anch - 1, 0);
                 }
                 Personaje unitl = Personaje.getPersonajeActivo();
                 if (unitl != null && unitl.getFaccion().equals("Letras")) {
@@ -115,36 +113,35 @@ public class JuegoController implements Initializable {
 
                     Button hist = new Button("H");
                     hist.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
-                    hist.setPrefSize(30,30);
-                    tableroGrid.add(hist, 0, alt-1);
+                    hist.setPrefSize(30, 30);
+                    tableroGrid.add(hist, 0, alt - 1);
 
                     Button fil = new Button("L");
                     fil.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: red; -fx-text-fill: white; ");
-                    fil.setPrefSize(30,30);
-                    tableroGrid.add(fil, anch-1, alt-1);
+                    fil.setPrefSize(30, 30);
+                    tableroGrid.add(fil, anch - 1, alt - 1);
 
                     Button mat = new Button("M");
                     mat.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
-                    mat.setPrefSize(30,30);
+                    mat.setPrefSize(30, 30);
                     tableroGrid.add(mat, 0, 0);
 
                     Button fis = new Button("F");
                     fis.setStyle("-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: blue; -fx-text-fill: white; ");
-                    fis.setPrefSize(30,30);
-                    tableroGrid.add(fis, anch-1, 0);
+                    fis.setPrefSize(30, 30);
+                    tableroGrid.add(fis, anch - 1, 0);
                 }
 
 
-                }
+            }
 
-                }
-        
+        }
+
     }
 
     public void actualizarSizeTablero(int filas, int columnas) {
         int sizeCelda = 35; // Tamaño base de cada celda
         int paddingTotal = 20;// Espacio adicional para padding
-
 
 
         int anchoTablero = sizeCelda * columnas + paddingTotal;
@@ -158,7 +155,8 @@ public class JuegoController implements Initializable {
 
         System.out.println("Nuevo tamaño del tablero: " + anchoTablero + "x" + altoTablero);
     }
-@FXML
+
+    @FXML
     public void ajustarMenuLateral(int anchoTablero) {
         int tamBaseMenu = 150;  // Tamaño mínimo de la caja lateral
         double tamMenuAjustado = Math.max(tamBaseMenu, anchoTablero / 2.5);
@@ -167,7 +165,8 @@ public class JuegoController implements Initializable {
         menuVBox.setMinWidth(tamMenuAjustado);
 
     }
-@FXML
+
+    @FXML
     public void ajustarBotonesMenu() {
         for (Node node : menuVBox.getChildren()) {
             if (node instanceof VBox) { // Recorremos cada VBox dentro de menuVBox
@@ -180,10 +179,6 @@ public class JuegoController implements Initializable {
             }
         }
     }
-
-
-
-
 
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -228,6 +223,7 @@ public class JuegoController implements Initializable {
         }
         setEsquinas();
     }
+
     @FXML
     private void Salir() {
         Stage stage = new Stage();
@@ -244,12 +240,12 @@ public class JuegoController implements Initializable {
         }
     }
 
-private static final int n = 5;
+    private static final int n = 5;
     private static final int m = 7;
-    private Button[][] labelMap = new Button[n][m];
+    private Button[][] mapa = new Button[n][m];
 
-    private int charRow = 0;
-    private int charCol = 0;
+    private int fila = 0;
+    private int columna = 0;
 
     private static final String CELL_STYLE = "-fx-border-color: black; -fx-text-alignment: center;";
     private static final String CHAR_STYLE = "-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-color: black;";
@@ -262,19 +258,19 @@ private static final int n = 5;
         tableroDeJuego.setAlignment(Pos.CENTER);
         tableroDeJuego.setHgap(5);
         tableroDeJuego.setVgap(5);
-        initializeBoard();
+        inicializarTablero();
 
         // Manejador de teclado
         tableroDeJuego.setOnKeyPressed(event -> {
             KeyCode code = event.getCode();
             if (code == KeyCode.UP) {
-                moveCharacter(charRow - 1, charCol);
+                mover(fila - 1, columna);
             } else if (code == KeyCode.DOWN) {
-                moveCharacter(charRow + 1, charCol);
+                mover(fila + 1, columna);
             } else if (code == KeyCode.LEFT) {
-                moveCharacter(charRow, charCol - 1);
+                mover(fila, columna - 1);
             } else if (code == KeyCode.RIGHT) {
-                moveCharacter(charRow, charCol + 1);
+                mover(fila, columna + 1);
             }
         });
 
@@ -282,49 +278,40 @@ private static final int n = 5;
         tableroDeJuego.requestFocus();
     }
 
-    private void initializeBoard() {
+    private void inicializarTablero() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                Button placeholder = new Button("Celda " + i + "," + j);
-                placeholder.setMinSize(100, 60);
-                placeholder.setStyle(CELL_STYLE);
-                placeholder.setFocusTraversable(false);
-                labelMap[i][j] = placeholder;
-                tableroDeJuego.add(placeholder, j, i);
+                Button casilla = new Button("Celda " + i + "," + j);
+                casilla.setMinSize(100, 60);
+                casilla.setStyle(CELL_STYLE);
+                casilla.setFocusTraversable(false);
+                mapa[i][j] = casilla;
+                tableroDeJuego.add(casilla, j, i);
             }
         }
-        updateCharacterPosition();
+        cambiarPoscion();
     }
 
-    private void moveCharacter(int newRow, int newCol) {
-        if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m) {
-            charRow = newRow;
-            charCol = newCol;
-            updateCharacterPosition();
+    private void mover(int fila, int columna) {
+        if (fila >= 0 && fila < n && columna >= 0 && columna < m) {
+            this.fila = fila;
+            this.columna = columna;
+            cambiarPoscion();
         }
     }
 
-    private void updateCharacterPosition() {
+    private void cambiarPoscion() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                Button btn = labelMap[i][j];
-                if (i == charRow && j == charCol) {
-                    btn.setText("⚔️ Personaje");
-                    btn.setStyle(CHAR_STYLE);
+                Button b = mapa[i][j];
+                if (i == fila && j == columna) {
+                    b.setText("⚔️ Personaje");
+                    b.setStyle(CHAR_STYLE);
                 } else {
-                    btn.setText("Celda " + i + "," + j);
-                    btn.setStyle(CELL_STYLE);
+                    b.setText("Celda " + i + "," + j);
+                    b.setStyle(CELL_STYLE);
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
