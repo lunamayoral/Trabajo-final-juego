@@ -6,6 +6,7 @@ module es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires com.google.gson;
+    requires java.desktop;
 
     opens es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego to javafx.fxml;
     exports es.uah.matcomp.mp.teoria.gui.mvc.javafx.trabajofinaljuego;
