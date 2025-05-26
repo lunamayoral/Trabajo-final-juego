@@ -39,7 +39,7 @@
                                  <Font size="10.0" />
                               </font>
                            </Button>
-                           <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="75.0" text="SALIR">
+                           <Button mnemonicParsing="false" onAction="#Salir" prefHeight="22.0" prefWidth="75.0" text="SALIR">
                               <font>
                                  <Font size="10.0" />
                               </font>
