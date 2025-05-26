@@ -23,7 +23,9 @@ public class Personaje {
         this.rangoMovimiento = rangoMovimiento;
         this.ataque= ataque;
         this.defensa = defensa;
+
     }
+
 
     public Personaje(String nombre, int puntosDeVida, int rangoMovimiento, int rangoAtaque, int ataque, int defensa){
         this.nombre = nombre;
@@ -32,6 +34,8 @@ public class Personaje {
         this.rangoAtaque = rangoAtaque;
         this.ataque= ataque;
         this.defensa = defensa;
+
+
     }
     public void setFaccion(String faccion){
         if (faccion.equals("Ciencias")){
@@ -40,11 +44,13 @@ public class Personaje {
         if (faccion.equals("Letras")){
             this.faccion = faccion;
         }
+
     }
 
     public String getFaccion(){
         return faccion;
     }
+
 
     public boolean setUnidades( String unidad1, String unidad2){
         if(getFaccion().equals("Ciencias")){
@@ -60,6 +66,8 @@ public class Personaje {
         }
     }
 
+
+
     public static void setPersonajeActivo(Personaje personaje) {
         personajeActivo = personaje;
     }
@@ -68,12 +76,20 @@ public class Personaje {
         return personajeActivo;
     }
 
+
+
+
+
+
+
     public  void setPersonaje(int movimiento, int ataque, int defensa){
         this.rangoMovimiento = movimiento;
         this.ataque= ataque;
         this.defensa = defensa;
 
     }
+
+
 
     public String getNombre(){return nombre;}
     public int getPuntosDeVida(){return puntosDeVida;}
@@ -84,4 +100,5 @@ public class Personaje {
     public int getDefensa(){return defensa;}
 
     public CasillaTTT inCasilla(){return casilla;}
+
 }

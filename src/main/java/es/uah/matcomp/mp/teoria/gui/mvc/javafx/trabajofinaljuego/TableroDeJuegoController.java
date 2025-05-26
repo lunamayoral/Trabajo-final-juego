@@ -112,5 +112,7 @@ public class TableroDeJuegoController implements Initializable {
 
         defensa.valueProperty().addListener((obs, oldVal, newVal) ->
                 defensaLabel.setText(String.format("Defensa: %.0f", newVal.doubleValue())));
+
+
     }
 }

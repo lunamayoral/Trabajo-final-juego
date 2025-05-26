@@ -13,4 +13,7 @@ public class TableroSize {
     // Métodos para recuperar los valores en otras clases
     public static int getAnchura() { return anchura; }
     public static int getAltura() { return altura; }
+
+
 }
+

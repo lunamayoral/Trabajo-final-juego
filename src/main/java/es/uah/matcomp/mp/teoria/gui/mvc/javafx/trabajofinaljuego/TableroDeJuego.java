@@ -18,6 +18,7 @@ public class TableroDeJuego extends Application {
         stage.setTitle("Diseño del Tablero");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {

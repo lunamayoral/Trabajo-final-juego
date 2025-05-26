@@ -45,9 +45,12 @@ public class TamañoTableroController implements Initializable {
                 System.out.println("Introduce valores positivos para altura y anchura.");
                 return;
             }
+
+
             TableroSize.setDimensiones(anchura, altura);
 
             System.out.println("Dimensiones guardadas: " + TableroSize.getAnchura() + " x " + TableroSize.getAltura());
+
 
             // Cargar la nueva pantalla con el tablero
             FXMLLoader loader = new FXMLLoader(getClass().getResource("tablerodejuego-view.fxml"));
@@ -59,6 +62,10 @@ public class TamañoTableroController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Tablero " + altura + " x " + anchura);
             stage.show();
+
+
+
+
         } catch (NumberFormatException e) {
             System.out.println("Introduce números válidos en altura y anchura.");
         } catch (IOException e) {
@@ -66,6 +73,23 @@ public class TamañoTableroController implements Initializable {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+
     }
 }
